@@ -22,9 +22,9 @@ print(welcome)
 while (user_input := input(menu)) != "3" :
     #dealing with the user input
     # user_input = input(menu)
-    if user_input==1:
-        add_entry
-    elif user_input==3:
-        view_entry
+    if user_input=="1":
+        add_entry()
+    elif user_input=="2":
+        view_entry()
     else:
-        print("invalid 1option. please choose any of the available options")
+        print("invalid option. please choose any of the available options")
