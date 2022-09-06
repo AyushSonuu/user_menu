@@ -1,4 +1,4 @@
-from database import add_entry,get_entry
+from database import add_entry,get_entry,create_table
 
 menu = """please select on of the following action:
 1) aAd new entry for today.
@@ -29,6 +29,7 @@ def view_entries(entries):
         print(f"{entry['date']}\n{entry['content']}\n\n")
 
 print(welcome)
+create_table()
 
 while (user_input := input(menu)) != "3" :
     #dealing with the user input
