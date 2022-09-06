@@ -1,7 +1,7 @@
 from database import add_entry,get_entry,create_table
 
 menu = """please select on of the following action:
-1) aAd new entry for today.
+1) Aad new entry for today.
 2) View entries
 3) Exit.
 

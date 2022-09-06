@@ -1,6 +1,7 @@
 import sqlite3
 
 connection = sqlite3.connect("dataa.db")
+connection.row_factory = sqlite3.Row
 
 # entries=[]
 def create_table():
@@ -18,4 +19,9 @@ def add_entry(entry_content,entry_date):
 
 
 def get_entry():
-    return entries
+    '''fetches the entries from the data base'''
+    # cursor = connection.cursor()
+    # cursor.execute("SELECT * FROM entries;")
+    cursor = connection.execute("SELECT * FROM entries ; ")
+    # cursor.fetchone()
+    return cursor
